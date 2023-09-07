@@ -17,42 +17,40 @@
 }
 
 body{
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+    background-color: var(--offWhite);
+    padding: 4.5em;  
 }
 
 .container{
-    border: 1px solid red;
+    border-radius: 8px 8px 48px 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    align-items: center;
     width: 100%;
     max-width: 80em;
     padding: 3em;
-    /* height: 300px; */
+    font-family: poppins;
+    background-color: var(--White);
     gap: 2em;
-    /* font-size: 32px; */
 }
 
 .top{
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 40em;
-    /* height: 20em; */
-    /* padding: 2em; */
     gap: 2em;
 }
 
 .generator{
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -62,24 +60,31 @@ body{
     max-width: 40em;
 }
 
-.generator::placeholder{
-    font-size: 32px;
-}
 
 label{
     display: block;
     margin-bottom: 0.2em;
-    /* font-size: 32px; */
     
 }
 
 input{
     outline: none;
-    margin: 0.6em 0;
+    margin: 0.54em 0;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    border: 1px solid var(--lightGrey);
+    cursor: pointer;
+}
+
+input::placeholder{
+    font-size: 24px;
+    text-align: center;
+    padding-top: 0.1em;
 }
 
 input:focus{
-    border: 2px solid var(--purple);
+    border: 1px solid var(--offBlack);
     outline: none;
 }
 
@@ -102,47 +107,30 @@ input:focus{
 }
 
 .middle{
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 50em;
-    /* try using position property to fix the submit button properly
-     */
+    max-width: 60em;
     
 }
 
 .linee{
-    width: 52em;
+    width: 37em;
+    max-width: 50em;
     height: 0.1em;
-    border: black;
     background-color: hsl(0, 0%, 86%);
-    /* opacity: 0.7;  */
 }
-
-/* button{
-    border: 1px solid red;
-    border-radius: 50%;
-    width: 100%;
-    max-width: 3em;
-    background-color: hsl(259, 100%, 65%);
-}
-
-button img{
-    display: block;
-    width: 100%;
-} */
 
 .arrow{
-    /* border: 1px solid red; */
+    border: none;
     border-radius: 50%;
     width: 100%;
-    max-width: 3em;
+    max-width: 3.5em;
     padding: 0.6em;
     background-color: var(--purple);
-    /* position: absolute; */
+    cursor: pointer;
 }
 
 .arrow img{
@@ -155,21 +143,19 @@ button img{
 }
 
 #dte{
-    width: 10em;
+    width: 8em;
     height: 3.4em;
-    
-     
     
 }
 
 #mnth{
-    width: 10em;
+    width: 8em;
     height: 3.4em;
     
 }
 
 #yrs{
-    width: 10em;
+    width: 8em;
     height: 3.4em;
     
 
@@ -180,40 +166,14 @@ button img{
     width: 100%;
     max-width: 50em;
     font-style: italic;
-    font-weight: bold;
-    font-size: 32px;
-    margin-top: 1.em;
+    font-weight: bolder;
+    font-size: 48px;
+    margin-top: 0.1em;
 }
-/* .day{
-    width: 15em;
-    max-width: 10em;
-    height: 8em;
-} */
-
-.month{
-    /* border: 1px solid red; */
-    /* width: 15em;
-    max-width: 10em;
-    height: 8em; */
-}
-
-.year{
-    /* border: 1px solid red; */
-    /* width: 15em;
-    max-width: 10em;
-    height: 8em;  */
-}
-
-/* .output{
-    list-style-type: none;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 32px;
-    margin-top: 1.em;
-} */
 
 .purple1{
     color: var(--purple);
+    font-weight: bolder;
 }
 
 .purple2{
@@ -222,4 +182,58 @@ button img{
 
 .purple3{
     color: var(--purple);
+}
+
+@media screen and (max-width: 600px) {
+
+    .top{
+        width: 100%;
+        max-width: 80%;
+    }
+
+    input{
+        font-size: 0.8rem;
+    }
+
+    #dte{
+        width: 5em;
+    }
+
+    #mnth{
+        width: 5em;
+    }
+
+    #yrs{
+        width: 5em;
+    }
+
+    .middle{
+        width: 100%;
+        /* max-width: 40em; */
+        max-width: 80%;
+        position: relative;
+        
+    }
+    
+    .linee{
+        width: 100%;
+        max-width: 100%;
+        height: 0.1em;
+    }
+    
+    .arrow{
+        position: absolute;
+        left: 40%;
+    }
+    
+    .arrow img{
+        display: block;
+        width: 100%;
+    }
+
+    .bottom{
+        max-width: 80%;
+        font-size: 28px;
+    }
+    
 }
